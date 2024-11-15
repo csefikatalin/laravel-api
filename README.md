@@ -26,5 +26,10 @@
         ];
     }
 
+## Autentikációs végpontok
 
+https://www.youtube.com/watch?v=7pCDK321ckE&list=PL38wFHH4qYZUXLba1gx1l5r_qqMoVZmKM&index=2
+
+## Frontend react SPA
+https://www.youtube.com/watch?v=Qfe7QlFFArA&list=PL38wFHH4qYZUXLba1gx1l5r_qqMoVZmKM&index=3
 

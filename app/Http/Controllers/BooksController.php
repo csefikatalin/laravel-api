@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Books;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class BooksController extends Controller
 {
@@ -13,6 +15,7 @@ class BooksController extends Controller
     public function index()
     {
         //
+        Gate::authorize('viewAny');
         $books = Books::all();
         return response()->json($books);
     }
