@@ -44,9 +44,10 @@ class BooksController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Books $book)
     {
         //
+        return $book;
     }
 
     /**
@@ -60,16 +61,24 @@ class BooksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Books $book)
     {
-        //
+        $validated = $request->validate([
+            'author' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'price' => 'required|integer|min:0',
+        ]);
+
+        $book ->update($validated);
+        return response()->json($book, 201);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Books $book)
     {
-        //
+        $book->delete();
+        return ["sikeres törlés"];
     }
 }
