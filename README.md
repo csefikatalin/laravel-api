@@ -10,7 +10,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravelapi
 DB_USERNAME=root
-DB_PASSWORD=```
+DB_PASSWORD=`
 
 5. API kiszolgáló készítése: ```php artisan install:api```
     Közben fogadjuk el a felajánlot acces token table migrálását!
@@ -18,16 +18,17 @@ DB_PASSWORD=```
 7. Modell létrehozása 
 
 ```
-class Books extends Model
-{
-/** @use HasFactory<\Database\Factories\BooksFactory> */</code>
-    use HasFactory;
-    protected $fillable=[
-        'title',
-        'author',
-        'price',
-    ];
-}```
+    class Books extends Model
+    {
+    /** @use HasFactory<\Database\Factories\BooksFactory> */</code>
+        use HasFactory;
+        protected $fillable=[
+            'title',
+            'author',
+            'price',
+        ];
+    }
+```
 
 ## Autentikációs végpontok
 
