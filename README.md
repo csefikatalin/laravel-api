@@ -5,12 +5,12 @@
 1. laravel projekt létrehozása : composer create-project laravel/laravel laravel-api
 2. .env fájl configurálása (adatbázis)
 
-`DB_CONNECTION=mysql
+```DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravelapi
 DB_USERNAME=root
-DB_PASSWORD=`
+DB_PASSWORD=```
 
 5. API kiszolgáló készítése: `php artisan install:api`
     Közben fogadjuk el a felajánlot acces token table migrálását!
