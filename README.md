@@ -12,21 +12,22 @@ DB_DATABASE=laravelapi
 DB_USERNAME=root
 DB_PASSWORD=```
 
-5. API kiszolgáló készítése: `php artisan install:api`
+5. API kiszolgáló készítése: ```php artisan install:api```
     Közben fogadjuk el a felajánlot acces token table migrálását!
 6. Modell, Controller, Seeder és a migrációs fájlok legenerálása: `php artisan make:model Books -a –api`
 7. Modell létrehozása 
 
-   <code>class Books extends Model</code>
-    <code>{</code>
-        <code>/** @use HasFactory<\Database\Factories\BooksFactory> */</code>
-       <code> use HasFactory;</code>
-       <code> protected $fillable=[</code>
-        <code>    'title',</code>
-        <code>    'author',</code>
-        <code>    'price',</code>
-        <code>];</code>
-    <code>}</code>
+```
+class Books extends Model
+{
+/** @use HasFactory<\Database\Factories\BooksFactory> */</code>
+    use HasFactory;
+    protected $fillable=[
+        'title',
+        'author',
+        'price',
+    ];
+}```
 
 ## Autentikációs végpontok
 
