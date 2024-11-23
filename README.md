@@ -4,18 +4,18 @@
 
 1. laravel projekt létrehozása : composer create-project laravel/laravel laravel-api
 2. .env fájl configurálása (adatbázis)
-    DB_CONNECTION=mysql
+    `DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=laravelapi
     DB_USERNAME=root
-    DB_PASSWORD=
-3. API kiszolgáló készítése: php artisan install:api
+    DB_PASSWORD=`
+3. API kiszolgáló készítése: `php artisan install:api`
     Közben fogadjuk el a felajánlot acces token table migrálását!
-4. Modell, Controller, Seeder és a migrációs fájlok legenerálása: php artisan make:model Books -a –api
+4. Modell, Controller, Seeder és a migrációs fájlok legenerálása: `php artisan make:model Books -a –api`
 5. Modell létrehozása 
 
-    class Books extends Model
+   ` class Books extends Model
     {
         /** @use HasFactory<\Database\Factories\BooksFactory> */
         use HasFactory;
@@ -24,7 +24,7 @@
             'author',
             'price',
         ];
-    }
+    }`
 
 ## Autentikációs végpontok
 
